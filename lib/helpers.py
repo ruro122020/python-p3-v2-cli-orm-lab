@@ -68,16 +68,15 @@ def delete_department():
 # You'll implement the employee functions in the lab
 
 def list_employees():
-    pass
-
+  employees = Employee.get_all()
+  for employee in employees:
+    print(employee)
 
 def find_employee_by_name():
     pass
 
-
 def find_employee_by_id():
     pass
-
 
 def create_employee():
     pass
