@@ -73,7 +73,12 @@ def list_employees():
     print(employee)
 
 def find_employee_by_name():
-    pass
+    name = input("Enter the employee's name: ")
+    employee = Employee.find_by_name(name)
+    if employee:
+        print(employee)
+    else:
+        print(f"Employee {name} not found")
 
 def find_employee_by_id():
     pass
