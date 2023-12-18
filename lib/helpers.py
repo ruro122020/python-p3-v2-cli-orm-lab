@@ -112,7 +112,16 @@ def update_employee():
         print(f"Employee {id_} not found")
 
 def delete_employee():
-    pass
+    id_ = input("Enter the employee's id: ")
+    employee = Employee.find_by_id(id_)
+    if employee:
+        try:
+            employee.delete()
+            print(f"Employee {id_} deleted")
+        except Exception as exc:
+            print("Employee", exc)
+    else:
+        print(f"Employee {id_} not found")
 
 def list_department_employees():
     pass
